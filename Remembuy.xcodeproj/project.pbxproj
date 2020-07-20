@@ -15,6 +15,8 @@
 		AE605DD024C47DC500E9CA07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE605DA524C47DC200E9CA07 /* ContentView.swift */; };
 		AE605DD124C47DC500E9CA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE605DA624C47DC500E9CA07 /* Assets.xcassets */; };
 		AE605DD224C47DC500E9CA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE605DA624C47DC500E9CA07 /* Assets.xcassets */; };
+		AE71558824C4AD520043C872 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71558724C4AD520043C872 /* KeyboardResponder.swift */; };
+		AE71558924C4AD520043C872 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71558724C4AD520043C872 /* KeyboardResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AE605DE724C483A300E9CA07 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AE605DA424C47DC200E9CA07 /* RemembuyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemembuyApp.swift; sourceTree = "<group>"; };
 		AE605DA524C47DC200E9CA07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +64,7 @@
 		AE605DC624C47DC500E9CA07 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE605DCA24C47DC500E9CA07 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		AE605DCC24C47DC500E9CA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE71558724C4AD520043C872 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,7 @@
 				AE605DA424C47DC200E9CA07 /* RemembuyApp.swift */,
 				AE605DA524C47DC200E9CA07 /* ContentView.swift */,
 				AE605DA624C47DC500E9CA07 /* Assets.xcassets */,
+				AE71558724C4AD520043C872 /* KeyboardResponder.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -161,12 +178,15 @@
 				AE605DA724C47DC500E9CA07 /* Sources */,
 				AE605DA824C47DC500E9CA07 /* Frameworks */,
 				AE605DA924C47DC500E9CA07 /* Resources */,
+				AE605DE724C483A300E9CA07 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = iOS;
+			packageProductDependencies = (
+			);
 			productName = iOS;
 			productReference = AE605DAB24C47DC500E9CA07 /* Remembuy.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +278,8 @@
 				Base,
 			);
 			mainGroup = AE605D9E24C47DC100E9CA07;
+			packageReferences = (
+			);
 			productRefGroup = AE605DAC24C47DC500E9CA07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,6 +332,7 @@
 			files = (
 				AE605DCF24C47DC500E9CA07 /* ContentView.swift in Sources */,
 				AE605DCD24C47DC500E9CA07 /* RemembuyApp.swift in Sources */,
+				AE71558824C4AD520043C872 /* KeyboardResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +342,7 @@
 			files = (
 				AE605DD024C47DC500E9CA07 /* ContentView.swift in Sources */,
 				AE605DCE24C47DC500E9CA07 /* RemembuyApp.swift in Sources */,
+				AE71558924C4AD520043C872 /* KeyboardResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
