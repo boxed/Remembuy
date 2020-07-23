@@ -1,10 +1,3 @@
-//
-//  KeyboardResponder.swift
-//  Remembuy
-//
-//  Created by Anders Hovmöller on 2020-07-19.
-//
-
 import Foundation
 import SwiftUI
 import Combine

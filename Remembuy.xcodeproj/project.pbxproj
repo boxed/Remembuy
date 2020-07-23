@@ -17,6 +17,12 @@
 		AE605DD224C47DC500E9CA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE605DA624C47DC500E9CA07 /* Assets.xcassets */; };
 		AE71558824C4AD520043C872 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71558724C4AD520043C872 /* KeyboardResponder.swift */; };
 		AE71558924C4AD520043C872 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71558724C4AD520043C872 /* KeyboardResponder.swift */; };
+		AE91106724C7138500617F1A /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91106624C7138500617F1A /* Items.swift */; };
+		AE91106824C7138500617F1A /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91106624C7138500617F1A /* Items.swift */; };
+		AE91106A24C713D700617F1A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91106924C713D700617F1A /* APIClient.swift */; };
+		AE91106B24C713D700617F1A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91106924C713D700617F1A /* APIClient.swift */; };
+		AE91106D24C713FE00617F1A /* RemembuyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91106C24C713FE00617F1A /* RemembuyAPI.swift */; };
+		AE91106E24C713FE00617F1A /* RemembuyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE91106C24C713FE00617F1A /* RemembuyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,9 @@
 		AE605DCA24C47DC500E9CA07 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		AE605DCC24C47DC500E9CA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE71558724C4AD520043C872 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		AE91106624C7138500617F1A /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		AE91106924C713D700617F1A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AE91106C24C713FE00617F1A /* RemembuyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemembuyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +127,9 @@
 				AE605DA524C47DC200E9CA07 /* ContentView.swift */,
 				AE605DA624C47DC500E9CA07 /* Assets.xcassets */,
 				AE71558724C4AD520043C872 /* KeyboardResponder.swift */,
+				AE91106624C7138500617F1A /* Items.swift */,
+				AE91106924C713D700617F1A /* APIClient.swift */,
+				AE91106C24C713FE00617F1A /* RemembuyAPI.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -330,8 +342,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE91106D24C713FE00617F1A /* RemembuyAPI.swift in Sources */,
+				AE91106724C7138500617F1A /* Items.swift in Sources */,
 				AE605DCF24C47DC500E9CA07 /* ContentView.swift in Sources */,
 				AE605DCD24C47DC500E9CA07 /* RemembuyApp.swift in Sources */,
+				AE91106A24C713D700617F1A /* APIClient.swift in Sources */,
 				AE71558824C4AD520043C872 /* KeyboardResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,8 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE91106E24C713FE00617F1A /* RemembuyAPI.swift in Sources */,
+				AE91106824C7138500617F1A /* Items.swift in Sources */,
 				AE605DD024C47DC500E9CA07 /* ContentView.swift in Sources */,
 				AE605DCE24C47DC500E9CA07 /* RemembuyApp.swift in Sources */,
+				AE91106B24C713D700617F1A /* APIClient.swift in Sources */,
 				AE71558924C4AD520043C872 /* KeyboardResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
