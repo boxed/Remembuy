@@ -9,6 +9,8 @@ enum RemembuyAPI {
 enum APIPath: String {
     case items = "items/"
     case add = "add/"
+    case complete = "complete/"
+    case unComplete = "un_complete/"
 }
 
 extension RemembuyAPI {

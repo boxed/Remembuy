@@ -30,4 +30,17 @@ class ItemsViewModel: ObservableObject {
                     onSuccess()
            })
     }
+    
+    func toggleItemCompletion(item: Item, onSuccess: @escaping () -> Void) {
+        cancellationToken = RemembuyAPI.post(item.completed ? .unComplete : .complete, parameters: ["id": "\(item.id)"])
+           .mapError({ (error) -> Error in
+               print(error)
+               return error
+           })
+           .sink(receiveCompletion: { _ in },
+                 receiveValue: {
+                    self.items.insert($0, at: 0)
+                    onSuccess()
+           })
+    }
 }

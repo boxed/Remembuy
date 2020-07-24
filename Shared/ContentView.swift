@@ -15,24 +15,38 @@ extension UIApplication {
     }
 }
 
-let itemBGColor = Color(red:0.9, green:0.9, blue:0.9)
-let itemBGColorCompleted = Color(red:0.95, green:0.95, blue:0.95)
+let itemBGColor = Color(red:0.1, green:0.1, blue:0.1)
+let itemBGColorCompleted = Color(red:0.05, green:0.05, blue:0.05)
 
 struct ItemView: View {
     @Binding var item: Item
+    @ObservedObject var viewModel = ItemsViewModel()
+    @State var loading = false
     
     var body: some View {
         Button(action: {
-            item.completed.toggle()
+            loading = true
+            viewModel.toggleItemCompletion(item: item, onSuccess: {
+                item.completed.toggle()
+                loading = false
+            })
         }) {
             Text(item.name)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            .foregroundColor(item.completed ? .gray : .white)
+            if loading {
+                Image(systemName: "icloud.and.arrow.up")
+                .foregroundColor(.white)
+            }
+            else {
+                Image(systemName: "blank")
+            }
         }
         .padding(10)
         .background(item.completed ? itemBGColorCompleted : itemBGColor)
         .foregroundColor(item.completed ? .gray : .black)
         .cornerRadius(10)
-        .padding(5)
+        .padding(2)
     }
 }
 
@@ -45,25 +59,30 @@ struct ContentView: View {
     @ObservedObject var viewModel = ItemsViewModel()
     
     var list: some View {
-        VStack(alignment: .leading) {
-            ForEach(viewModel.items.indices, id:\.self) { i in
-                HStack(alignment:.top) {
-                    ItemView(item: $viewModel.items[i])
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(viewModel.items.indices, id:\.self) { i in
+                    HStack(alignment:.top) {
+                        ItemView(item: $viewModel.items[i])
+                    }
                 }
             }
         }
     }
     
     var autocompleteView: some View {
-        VStack(alignment: .leading) {
-            ForEach(autoCompleteItems, id:\.self) { item in
-                Button(action: {
-                    viewModel.addItem(item, onSuccess: {
-                        addItemString = ""
-                        UIApplication.shared.endEditing()
-                    })
-                }) {
-                    Text(item)
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(autoCompleteItems, id:\.self) { item in
+                    Button(action: {
+                        viewModel.addItem(item, onSuccess: {
+                            addItemString = ""
+                            // UIApplication.shared.endEditing()
+                        })
+                    }) {
+                        Text(item)
+                        .foregroundColor(.purple)
+                    }
                 }
             }
         }
@@ -86,6 +105,7 @@ struct ContentView: View {
                 }
             )
             .padding(10)
+            .foregroundColor(.white)
                 
             if keyboard.currentHeight == 0.0 {
                 list
@@ -96,6 +116,8 @@ struct ContentView: View {
 
             Spacer()
         }
+        .background(Color.black)
+        .preferredColorScheme(.dark)
     }
 }
 
